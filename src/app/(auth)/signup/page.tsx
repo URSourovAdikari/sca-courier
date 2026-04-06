@@ -43,7 +43,7 @@ const signUpSchema = z.object({
     .regex(/^[a-z0-9_]+$/, "Only lowercase letters, numbers and underscores"),
   password: z
     .string()
-    .min(8, "Password must be at least 8 characters")
+    .min(6, "Password must be at least 6 characters")
     .regex(/[A-Z]/, "Must contain at least one uppercase letter")
     .regex(/[0-9]/, "Must contain at least one number")
     .regex(/[^a-zA-Z0-9]/, "Must contain at least one special character"),
