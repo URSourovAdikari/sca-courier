@@ -29,8 +29,8 @@ const instrumentSerif = Instrument_Serif({
 const signUpSchema = z.object({
   name: z
     .string()
-    .min(2, "Name must be at least 2 characters")
-    .max(60, "Name is too long")
+    .min(3, "Name must be at least 3 characters")
+    .max(20, "Name is too long")
     .regex(/^[a-zA-Z\s'-]+$/, "Only letters, spaces, hyphens and apostrophes"),
   email: z
     .string()
@@ -38,7 +38,7 @@ const signUpSchema = z.object({
     .email("Please enter a valid email address"),
   username: z
     .string()
-    .min(3, "Username must be at least 3 characters")
+    .min(5, "Username must be at least 5 characters")
     .max(20, "Username must be 20 characters or less")
     .regex(/^[a-z0-9_]+$/, "Only lowercase letters, numbers and underscores"),
   password: z
