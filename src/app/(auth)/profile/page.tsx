@@ -7,9 +7,9 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Instrument_Serif } from "next/font/google";
 import {
-  User, Mail, Shield, Calendar, LogOut, Edit3, Lock, Eye, EyeOff,
+  User, Mail, Calendar, LogOut, Edit3, Lock, Eye, EyeOff,
   CheckCircle2, X, Loader2, Package, Truck, LayoutDashboard, Users,
-  KeyRound, ChevronRight, BadgeCheck, AlertCircle,
+  KeyRound, ChevronRight, AlertCircle,
 } from "lucide-react";
 
 // ─── Font ─────────────────────────────────────────────────────────────────────
@@ -170,9 +170,15 @@ function EditNameModal({ currentName, onClose, onSuccess, session, update }: {
             Keep Old
           </button>
           <button type="submit" disabled={loading || name.trim() === currentName}
-            className="flex-[1.5] py-4 rounded-2xl bg-indigo-600 hover:bg-indigo-700 text-white text-base font-bold shadow-xl shadow-indigo-600/20 transition-all disabled:opacity-50 disabled:grayscale flex items-center justify-center gap-3">
-            {loading ? <Loader2 size={18} className="animate-spin" /> : <BadgeCheck size={18} />}
-            {loading ? "Updating..." : "Save Name"}
+            className="flex-[1.5] py-4 rounded-2xl bg-indigo-600 hover:bg-indigo-700 text-white text-base font-bold shadow-xl shadow-indigo-600/20 transition-all disabled:opacity-50 disabled:grayscale flex items-center justify-center gap-3" >
+            {loading ? (
+              <>
+                <Loader2 size={18} className="animate-spin" />
+                Updating...
+              </>
+            ) : (
+              "Update"
+            )}
           </button>
         </div>
       </form>
@@ -308,8 +314,14 @@ function ChangePasswordModal({ onClose }: { onClose: () => void }) {
                 className="flex-1 py-3 rounded-full bg-neutral-900 dark:bg-white text-white dark:text-neutral-900 text-sm font-semibold relative overflow-hidden group disabled:opacity-50 disabled:cursor-not-allowed shadow-lg transition-all duration-300 hover:shadow-xl">
                 <span className="absolute inset-0 bg-gradient-to-r from-indigo-600 via-violet-600 to-fuchsia-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <span className="relative flex items-center justify-center gap-2 group-hover:text-white transition-colors duration-300">
-                  {loading ? <Loader2 size={14} className="animate-spin" /> : <Shield size={14} />}
-                  {loading ? "Updating..." : "Update Password"}
+                  {loading ? (
+                  <>
+                    <Loader2 size={14} className="animate-spin" />
+                    Updating...
+                  </>
+                ) : (
+                  "Update"
+                )}
                 </span>
               </button>
             </div>
