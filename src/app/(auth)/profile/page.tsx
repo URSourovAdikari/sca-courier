@@ -540,7 +540,7 @@ export default function ProfilePage() {
                   <button onClick={() => signOut({ callbackUrl: "/" })}
                     className="py-3 rounded-xl border border-red-200 dark:border-red-500/20
                     text-red-500 hover:bg-red-50 dark:hover:bg-red-500/10 transition-all text-sm font-semibold">
-                    Sign Out
+                    Log Out
                   </button>
 
                 </div>
