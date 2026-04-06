@@ -604,7 +604,7 @@ const Header = ({ className = "" }: { className?: string }) => {
                 {/* Drawer footer */}
                 <div className="px-6 py-5 mt-4 border-t border-neutral-100 dark:border-neutral-800/60">
                   <p className="text-xs text-neutral-400 dark:text-neutral-600">
-                    © {new Date().getFullYear()} SCA Universe
+                    © {new Date().getFullYear()} SCA Courier
                   </p>
                   <p className="text-[11px] text-neutral-300 dark:text-neutral-700 mt-0.5">
                     All rights reserved.
