@@ -525,25 +525,6 @@ const Header = ({ className = "" }: { className?: string }) => {
                     );
                   })}
 
-                  {/* Mobile Logout if authenticated */}
-                  {isAuthenticated && (
-                    <motion.div
-                      initial={{ opacity: 0, x: 20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.05 + mobileSidebarLinks.length * 0.06, duration: 0.3, ease: "easeOut" }}
-                    >
-                      <button
-                        onClick={() => {
-                          setIsOpen(false);
-                          signOut();
-                        }}
-                        className="w-full flex items-center justify-between px-4 py-3.5 rounded-xl text-[15px] font-semibold transition-all duration-200 group text-red-500 hover:bg-red-50 dark:hover:bg-red-500/10 hover:pr-5"
-                      >
-                        Log Out
-                      </button>
-                    </motion.div>
-                  )}
-
                   {/* Mobile Unauthenticated Links */}
                   {!isAuthenticated && (
                     <>
