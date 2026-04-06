@@ -52,14 +52,14 @@ export async function PATCH(req: NextRequest) {
       }
 
       const strongPassword =
-        newPassword.length >= 8 &&
+        newPassword.length >= 6 &&
         /[A-Z]/.test(newPassword) &&
         /[0-9]/.test(newPassword) &&
         /[^a-zA-Z0-9]/.test(newPassword);
 
       if (!strongPassword) {
         return NextResponse.json(
-          { error: "Password must be 8+ characters with uppercase, number, and special character." },
+          { error: "Password must be 6+ characters with uppercase, number, and special character." },
           { status: 400 }
         );
       }
