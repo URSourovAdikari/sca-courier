@@ -7,7 +7,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Instrument_Serif } from "next/font/google";
 import {
-  User, Mail, Calendar, LogOut, Edit3, Lock, Eye, EyeOff,
+  User, Mail, Shield, Calendar, LogOut, Edit3, Lock, Eye, EyeOff,
   CheckCircle2, X, Loader2, Package, Truck, LayoutDashboard, Users,
   KeyRound, ChevronRight, AlertCircle,
 } from "lucide-react";
