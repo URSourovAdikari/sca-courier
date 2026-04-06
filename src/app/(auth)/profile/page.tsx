@@ -21,7 +21,7 @@ const instrumentSerif = Instrument_Serif({
 function PasswordStrength({ password }: { password: string }) {
   if (!password) return null;
   const checks = [
-    { label: "8+ characters",     pass: password.length >= 8 },
+    { label: "6+ characters",     pass: password.length >= 6 },
     { label: "Uppercase letter",  pass: /[A-Z]/.test(password) },
     { label: "Number",            pass: /[0-9]/.test(password) },
     { label: "Special character", pass: /[^a-zA-Z0-9]/.test(password) },
